@@ -31,8 +31,13 @@ output tìm kiếm dài dòng nằm trong context của subagent, chỉ kết lu
 
 **Khi phân vân giữa hai tầng, chọn tầng rẻ hơn** và nâng lên nếu kết quả không đạt.
 
-**Chạy song song.** Nhiều việc độc lập nhau → spawn cùng lúc trong một message, đừng
-xếp hàng tuần tự.
+**Phân bổ model cho subagent theo việc.** Không mặc định một model cho mọi subagent —
+chọn tầng khớp với việc (haiku cho tìm kiếm/đọc nhiều, sonnet cho khảo sát/thực thi
+theo plan) như các mục trên đã nêu. Thấy hợp lý mới nâng hoặc hạ tầng.
+
+**Chỉ chạy tối đa một subagent tại một thời điểm.** Không spawn song song nhiều
+subagent. Nhiều việc độc lập → xếp hàng tuần tự, chờ subagent hiện tại xong rồi mới
+spawn cái tiếp theo.
 
 ## Quy trình
 
